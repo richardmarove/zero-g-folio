@@ -2,125 +2,192 @@
 ---
 
 <section
-    class="py-20 border-t-4 border-black dark:border-white bg-[#EBFF00] dark:bg-[#101622] relative overflow-hidden"
+    class="relative py-24 border-t-4 border-black dark:border-white bg-[#EBFF00] dark:bg-[#101622] overflow-hidden"
 >
+    <!-- Background Texture -->
     <div
-        class="absolute -right-20 -top-20 w-96 h-96 bg-white/20 rounded-full blur-3xl pointer-events-none"
+        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] opacity-10 pointer-events-none"
     >
     </div>
-    <div class="mx-auto max-w-[1200px] px-6 relative z-10">
-        <div class="grid md:grid-cols-12 gap-8">
-            <div class="md:col-span-5 flex flex-col gap-6">
+
+    <!-- Background Decor -->
+    <div
+        class="absolute -right-20 -top-20 w-[600px] h-[600px] bg-white/10 dark:bg-white/5 rounded-full blur-3xl pointer-events-none"
+    >
+    </div>
+
+    <!-- Giant Backdrop Text -->
+    <div
+        class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-10 -rotate-90 select-none pointer-events-none opacity-5 dark:opacity-20 flex"
+    >
+        <span
+            class="text-[15rem] md:text-[20rem] font-black leading-none text-black dark:text-white uppercase tracking-tighter"
+            >Tools</span
+        >
+    </div>
+
+    <div class="mx-auto max-w-[1440px] px-6 md:px-12 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+            <!-- Left Info Section -->
+            <div class="lg:col-span-5 flex flex-col gap-8 relative">
                 <div
-                    class="bg-white dark:bg-[#192233] border-4 border-black dark:border-white p-8 shadow-neo-lg"
+                    class="absolute -left-6 -top-6 w-24 h-24 bg-[#FF0099] border-4 border-black dark:border-white z-0 transform -rotate-6"
                 >
+                </div>
+
+                <div
+                    class="relative z-10 bg-white dark:bg-[#192233] border-4 border-black dark:border-white p-8 md:p-10 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] dark:shadow-[12px_12px_0px_0px_#ffffff]"
+                >
+                    <div
+                        class="inline-block w-fit bg-black text-[#EBFF00] px-3 py-1 mb-6 font-bold text-sm uppercase tracking-widest transform rotate-2 border-2 border-black dark:border-transparent"
+                    >
+                        Hardware & Software
+                    </div>
+
                     <h2
-                        class="text-4xl font-black mb-6 uppercase text-black dark:text-white"
+                        class="text-5xl md:text-6xl font-black mb-6 uppercase text-black dark:text-white leading-[0.9]"
                     >
                         The Toolkit
                     </h2>
                     <p
-                        class="text-lg font-medium mb-6 text-slate-800 dark:text-slate-300"
+                        class="text-xl font-medium mb-8 text-black dark:text-slate-200 border-l-8 border-[#135bec] pl-4"
                     >
-                        I don't just write code; I craft digital solutions. My
-                        stack is built for speed, scalability, and shouting from
-                        the rooftops.
+                        My main toolkits! If you're curious with more hardwares
+                        and softwares that I use, click <span class="italic"
+                            >View Full Toolkits</span
+                        >
                     </p>
-                    <ul
-                        class="space-y-3 font-mono text-base font-bold text-black dark:text-white"
+
+                    <div
+                        class="flex flex-wrap gap-4 font-mono font-bold text-sm md:text-base"
                     >
-                        <li class="flex items-center gap-3">
-                            <span
-                                class="material-symbols-outlined text-[#135bec]"
-                                >check_box</span
-                            >
+                        <div
+                            class="bg-[#EBFF00] text-black border-2 border-black px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all cursor-default"
+                        >
                             Frontend Architecture
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span
-                                class="material-symbols-outlined text-[#135bec]"
-                                >check_box</span
+                        </div>
+                        <div
+                            class="bg-black text-white border-2 border-black dark:border-white px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_#ffffff] transform -rotate-2 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_#ffffff] transition-all cursor-default relative"
+                        >
+                            <div
+                                class="absolute -right-2 -top-2 w-4 h-4 bg-[#FF0099] rounded-full border-2 border-white pointer-events-none"
                             >
-                            Interactive 3D WebGL
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span
-                                class="material-symbols-outlined text-[#135bec]"
-                                >check_box</span
-                            >
+                            </div>
+                            Database-driven Application
+                        </div>
+                        <div
+                            class="bg-white text-black border-2 border-black px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform rotate-1 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all cursor-default"
+                        >
                             Headless CMS Integration
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span
-                                class="material-symbols-outlined text-[#135bec]"
-                                >check_box</span
-                            >
+                        </div>
+                        <div
+                            class="bg-[#135bec] text-white border-2 border-black px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all cursor-default"
+                        >
                             Performance Optimization
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-4">
+
+            <!-- Right Grid Section -->
+            <div
+                class="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-6 lg:pl-10"
+            >
                 <div
-                    class="bg-black dark:bg-white p-4 flex flex-col items-center justify-center aspect-square border-2 border-black hover:-translate-y-1 transition-transform"
+                    class="group relative bg-[#FF0099] p-6 lg:p-8 flex flex-col items-center justify-center aspect-square border-4 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_#ffffff] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[16px_16px_0px_0px_#ffffff] transition-all z-10 hover:z-20"
                 >
                     <span
-                        class="material-symbols-outlined text-4xl text-[#EBFF00] dark:text-[#135bec] mb-2"
+                        class="material-symbols-outlined text-6xl text-white mb-4 group-hover:scale-110 transition-transform"
                         >html</span
                     >
-                    <span class="font-bold text-white dark:text-black"
+                    <span
+                        class="font-black text-xl text-white tracking-widest uppercase bg-black px-2 border-2 border-white transform rotate-3"
                         >HTML5</span
                     >
                 </div>
+
                 <div
-                    class="bg-white dark:bg-[#192233] p-4 flex flex-col items-center justify-center aspect-square border-2 border-black dark:border-white hover:-translate-y-1 transition-transform"
+                    class="group relative bg-white dark:bg-[#192233] p-6 lg:p-8 flex flex-col items-center justify-center aspect-square border-4 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_#ffffff] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[16px_16px_0px_0px_#ffffff] transition-all transform mt-4 z-10 hover:z-20"
                 >
                     <span
-                        class="material-symbols-outlined text-4xl text-[#135bec] mb-2"
+                        class="material-symbols-outlined text-6xl text-[#135bec] dark:text-[#EBFF00] mb-4 group-hover:scale-110 transition-transform"
                         >css</span
                     >
-                    <span class="font-bold text-black dark:text-white"
+                    <span
+                        class="font-black text-xl text-black dark:text-white tracking-widest uppercase border-b-4 border-black dark:border-white pb-1"
                         >CSS3</span
                     >
                 </div>
+
                 <div
-                    class="bg-[#FF0099] p-4 flex flex-col items-center justify-center aspect-square border-2 border-black hover:-translate-y-1 transition-transform"
+                    class="group relative bg-black dark:bg-[#EBFF00] p-6 lg:p-8 flex flex-col items-center justify-center aspect-square border-4 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_#ffffff] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[16px_16px_0px_0px_#ffffff] transition-all transform -rotate-3 z-10 hover:z-20"
                 >
                     <span
-                        class="material-symbols-outlined text-4xl text-white mb-2"
+                        class="material-symbols-outlined text-6xl text-[#EBFF00] dark:text-black mb-4 group-hover:scale-110 transition-transform"
                         >javascript</span
                     >
-                    <span class="font-bold text-white">JS/TS</span>
+                    <span
+                        class="font-black text-xl text-[#EBFF00] dark:text-black tracking-widest uppercase bg-[#FF0099] dark:bg-white px-2 border-2 border-[#EBFF00] dark:border-black transform -rotate-2"
+                        >JS/TS</span
+                    >
                 </div>
+
                 <div
-                    class="bg-white dark:bg-[#192233] p-4 flex flex-col items-center justify-center aspect-square border-2 border-black dark:border-white hover:-translate-y-1 transition-transform"
+                    class="group relative bg-[#135bec] p-6 lg:p-8 flex flex-col items-center justify-center aspect-square border-4 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_#ffffff] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[16px_16px_0px_0px_#ffffff] transition-all transform rotate-2 -mt-4 z-10 hover:z-20"
                 >
                     <span
-                        class="material-symbols-outlined text-4xl text-black dark:text-white mb-2"
+                        class="material-symbols-outlined text-6xl text-[#EBFF00] dark:text-white mb-4 group-hover:scale-110 transition-transform"
                         >database</span
                     >
-                    <span class="font-bold text-black dark:text-white">SQL</span
+                    <span
+                        class="font-black text-xl text-white tracking-widest uppercase border-4 border-black bg-black px-2"
+                        >SQL</span
                     >
                 </div>
+
                 <div
-                    class="bg-[#135bec] p-4 flex flex-col items-center justify-center aspect-square border-2 border-black hover:-translate-y-1 transition-transform"
+                    class="group relative bg-white dark:bg-[#192233] p-6 lg:p-8 flex flex-col items-center justify-center aspect-square border-4 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_#ffffff] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[16px_16px_0px_0px_#ffffff] transition-all z-10 hover:z-20"
                 >
-                    <span
-                        class="material-symbols-outlined text-4xl text-white mb-2"
-                        >api</span
+                    <div
+                        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] opacity-10 pointer-events-none"
                     >
-                    <span class="font-bold text-white">REST API</span>
+                    </div>
+                    <img
+                        src="https://img.icons8.com/ios/100/fedora.png"
+                        alt="Fedora Logo"
+                        class="w-6 h-6 mb-4 group-hover:scale-110 transition-transform filter dark:invert"
+                    />
+                    <span
+                        class="font-black text-lg text-black dark:text-white tracking-widest uppercase border-b-4 border-[#FF0099] pb-1 transform rotate-1 text-center leading-tight z-10"
+                        >Fedora Linux</span
+                    >
                 </div>
+
                 <div
-                    class="bg-white dark:bg-[#192233] p-4 flex flex-col items-center justify-center aspect-square border-2 border-black dark:border-white hover:-translate-y-1 transition-transform"
+                    class="group relative bg-[#EBFF00] dark:bg-black p-6 lg:p-8 flex flex-col items-center justify-center aspect-square border-4 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_#ffffff] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[16px_16px_0px_0px_#ffffff] transition-all transform rotate-3 -mt-8 md:-mt-0 z-10 hover:z-20"
                 >
                     <span
-                        class="material-symbols-outlined text-4xl text-black dark:text-white mb-2"
-                        >deployed_code</span
+                        class="material-symbols-outlined text-6xl text-black dark:text-white mb-4 group-hover:scale-110 transition-transform"
+                        >code</span
                     >
-                    <span class="font-bold text-black dark:text-white"
-                        >Docker</span
+                    <span
+                        class="font-black text-xl text-black dark:text-white tracking-widest uppercase bg-white dark:bg-[#135bec] px-2 border-2 border-black dark:border-white transform -rotate-3 text-center leading-tight whitespace-nowrap"
+                        >VS Code</span
                     >
+                </div>
+
+                <!-- "View Full Toolkit" Button -->
+                <div
+                    class="col-span-2 md:col-span-3 flex justify-end mt-4 lg:mt-6"
+                >
+                    <button
+                        class="bg-black text-white dark:bg-white dark:text-black px-8 py-4 text-xl font-black border-4 border-black dark:border-white shadow-[8px_8px_0px_0px_#FF0099] dark:shadow-[8px_8px_0px_0px_#FF0099] hover:translate-y-2 hover:translate-x-2 hover:shadow-none transition-all uppercase flex items-center justify-center gap-3"
+                    >
+                        <span>View Full Toolkits</span>
+                        <span class="material-symbols-outlined text-3xl"
+                            >arrow_forward</span
+                        >
+                    </button>
                 </div>
             </div>
         </div>

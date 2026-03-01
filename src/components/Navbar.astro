@@ -40,9 +40,54 @@
             </button>
         </div>
         <button
+            id="mobile-menu-btn"
             class="md:hidden p-2 border-2 border-black dark:border-white shadow-neo-sm bg-white dark:bg-black text-black dark:text-white"
         >
-            <span class="material-symbols-outlined">menu</span>
+            <span id="mobile-menu-icon" class="material-symbols-outlined"
+                >menu</span
+            >
+        </button>
+    </div>
+
+    <!-- Mobile Menu Container -->
+    <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 w-full bg-gray-300 dark:bg-gray-800 border-b-4 border-black dark:border-white px-6 py-6 flex-col gap-6 shadow-xl"
+    >
+        <a
+            class="text-xl font-bold text-black dark:text-white hover:underline decoration-4 decoration-black dark:decoration-white underline-offset-4"
+            href="#">WORK</a
+        >
+        <a
+            class="text-xl font-bold text-black dark:text-white hover:underline decoration-4 decoration-black dark:decoration-white underline-offset-4"
+            href="#">ABOUT</a
+        >
+        <a
+            class="text-xl font-bold text-black dark:text-white hover:underline decoration-4 decoration-black dark:decoration-white underline-offset-4"
+            href="#">RESUME</a
+        >
+        <button
+            class="bg-black text-white dark:bg-white dark:text-black px-6 py-4 font-bold shadow-neo border-2 border-transparent w-full mt-2"
+        >
+            CONTACT ME
         </button>
     </div>
 </nav>
+
+<script>
+    const btn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    const icon = document.getElementById("mobile-menu-icon");
+
+    btn?.addEventListener("click", () => {
+        if (menu?.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            menu.classList.add("flex");
+            if (icon) icon.textContent = "close";
+        } else {
+            menu?.classList.add("hidden");
+            menu?.classList.remove("flex");
+            if (icon) icon.textContent = "menu";
+        }
+    });
+</script>

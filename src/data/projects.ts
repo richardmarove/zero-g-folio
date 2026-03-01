@@ -47,11 +47,11 @@ export const projects: Project[] = [
         repo: "#"
     },
     {
-        title: "DataDash",
-        description: "A real-time analytics dashboard with complex data visualization components.",
-        image: "",
+        title: "Ricky's AI Wrapper",
+        description: "An attempt in making my own AI wrapper using AI Studio & OpenRouter API.",
+        image: "/geminiw.png",
         category: "Fullstack",
-        tags: ["Next.js", "Prisma", "Chart.js"],
+        tags: ["Next.js", "Tailwind", "AI Studio", "OpenRouter"],
         accent: "bg-[#FF3366]",
         shadow: "bg-[#00E5FF]",
         link: "#",

@@ -80,15 +80,26 @@ const { project, index } = Astro.props;
                 </div>
 
                 <div class="flex gap-3 mt-auto">
-                    <a
-                        href={project.link}
-                        class="flex-1 bg-black dark:bg-white text-white dark:text-black py-2 text-center font-bold border-2 border-transparent hover:bg-transparent hover:text-black dark:hover:text-white hover:border-black dark:hover:border-white transition-colors text-sm uppercase flex items-center justify-center gap-1 group/btn"
-                    >
-                        Visit <span
-                            class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform"
-                            >arrow_outward</span
-                        >
-                    </a>
+                    {
+                        project.isUnderDevelopment ? (
+                            <div class="flex-1 bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 py-2 text-center font-bold border-2 border-dashed border-slate-400 dark:border-slate-500 text-sm uppercase flex items-center justify-center gap-1 cursor-not-allowed">
+                                DEV{" "}
+                                <span class="material-symbols-outlined text-[16px]">
+                                    lock
+                                </span>
+                            </div>
+                        ) : (
+                            <a
+                                href={project.link}
+                                class="flex-1 bg-black dark:bg-white text-white dark:text-black py-2 text-center font-bold border-2 border-transparent hover:bg-transparent hover:text-black dark:hover:text-white hover:border-black dark:hover:border-white transition-colors text-sm uppercase flex items-center justify-center gap-1 group/btn"
+                            >
+                                Visit{" "}
+                                <span class="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform">
+                                    arrow_outward
+                                </span>
+                            </a>
+                        )
+                    }
                     <a
                         href={project.repo}
                         class="px-3 py-2 bg-transparent text-black dark:text-white border-2 border-black dark:border-white hover:bg-[#EBFF00] hover:text-black hover:border-black transition-colors"

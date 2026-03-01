@@ -8,20 +8,10 @@ export interface Project {
     shadow: string;
     link: string;
     repo: string;
+    isUnderDevelopment?: boolean;
 }
 
 export const projects: Project[] = [
-    {
-        title: "Alvetrix",
-        description: "A comprehensive sports management & data platform that digitizes matches in Indonesia.",
-        image: "/alvetrix2.png",
-        category: "Fullstack",
-        tags: ["PHP", "CSS", "MySQL"],
-        accent: "bg-[#EBFF00]",
-        shadow: "bg-black dark:bg-white",
-        link: "#",
-        repo: "#"
-    },
     {
         title: "project-overlord",
         description: "My own personal CMS that I built for myself to rant about my life and politics.",
@@ -32,6 +22,18 @@ export const projects: Project[] = [
         shadow: "bg-[#FF0099]",
         link: "#",
         repo: "#"
+    },
+    {
+        title: "Alvetrix",
+        description: "A comprehensive sports management & data platform that digitizes matches in Indonesia.",
+        image: "/alvetrix2.png",
+        category: "Fullstack",
+        tags: ["PHP", "CSS", "MySQL"],
+        accent: "bg-[#EBFF00]",
+        shadow: "bg-black dark:bg-white",
+        link: "#",
+        repo: "#",
+        isUnderDevelopment: true
     },
     {
         title: "Neon Nexus",

@@ -1,0 +1,93 @@
+---
+interface Props {
+    categories: string[];
+}
+
+const { categories } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-4 mb-16 category-filters">
+    {
+        categories.map((cat, i) => (
+            <button
+                class={`filter-btn px-6 py-3 text-lg font-bold border-4 border-black dark:border-white transition-all uppercase ${
+                    i === 0
+                        ? "bg-black text-white dark:bg-white dark:text-black shadow-none translate-x-1 translate-y-1"
+                        : "bg-white text-black dark:bg-[#192233] dark:text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+                }`}
+                data-category={cat}
+            >
+                {cat}
+            </button>
+        ))
+    }
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const projectCards = document.querySelectorAll(".project-card");
+
+        if (!filterBtns.length) return;
+
+        filterBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const category = btn.getAttribute("data-category");
+
+                // Update active button styles
+                filterBtns.forEach((b) => {
+                    b.classList.remove(
+                        "bg-black",
+                        "text-white",
+                        "dark:bg-white",
+                        "dark:text-black",
+                        "shadow-none",
+                        "translate-x-1",
+                        "translate-y-1"
+                    );
+                    b.classList.add(
+                        "bg-white",
+                        "text-black",
+                        "dark:bg-[#192233]",
+                        "dark:text-white",
+                        "shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]",
+                        "dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
+                    );
+                });
+
+                btn.classList.add(
+                    "bg-black",
+                    "text-white",
+                    "dark:bg-white",
+                    "dark:text-black",
+                    "shadow-none",
+                    "translate-x-1",
+                    "translate-y-1"
+                );
+                btn.classList.remove(
+                    "bg-white",
+                    "text-black",
+                    "dark:bg-[#192233]",
+                    "dark:text-white",
+                    "shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]",
+                    "dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
+                );
+
+                // Filter cards based on original logic but fixing the typescript/lint complaints
+                projectCards.forEach((card) => {
+                    const el = card as HTMLElement;
+                    const cardCat = el.getAttribute("data-category");
+                    if (category === "All" || cardCat === category) {
+                        el.style.display = "block";
+                        // Re-trigger animation
+                        el.style.animation = "none";
+                        el.offsetHeight; /* trigger reflow */
+                        el.style.animation = "";
+                    } else {
+                        el.style.display = "none";
+                    }
+                });
+            });
+        });
+    });
+</script>

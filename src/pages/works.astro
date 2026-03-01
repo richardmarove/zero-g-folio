@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import ProjectCard from "../components/worksComps/ProjectCard.astro";
+import CategoryFilters from "../components/worksComps/CategoryFilters.astro";
+import { projects, categories } from "../data/projects";
+---
+
+<Layout title="Works | Archive">
+    <Navbar />
+
+    <main
+        class="flex-grow pt-32 pb-20 px-6 bg-background-light dark:bg-background-dark min-h-screen"
+    >
+        <div class="mx-auto max-w-[1400px]">
+            <header class="mb-16">
+                <h1
+                    class="text-6xl md:text-8xl font-black text-black dark:text-white mb-4 uppercase tracking-tighter title-glitch"
+                    data-text="WORKS"
+                >
+                    WORKS<br /><span class="text-[#FF0099]">ARCHIVE</span>
+                </h1>
+                <div
+                    class="h-4 w-48 bg-[#EBFF00] border-2 border-black dark:border-white shadow-neo-sm mb-8"
+                >
+                </div>
+                <p
+                    class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 max-w-2xl font-medium leading-relaxed"
+                >
+                    A comprehensive collection of my digital experiments, client
+                    projects, and chaotic creations.
+                </p>
+            </header>
+
+            <!-- Filters -->
+            <CategoryFilters categories={categories} />
+
+            <!-- Grid -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 projects-grid"
+            >
+                {
+                    projects.map((project, index) => (
+                        <ProjectCard project={project} index={index} />
+                    ))
+                }
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</Layout>

@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-primary: #135bec;
+    --color-background-light: #f6f6f8;
+    --color-background-dark: #101622;
+    --color-neo-yellow: #EBFF00;
+    --color-neo-pink: #FF0099;
+    --color-neo-black: #000000;
+    --color-neo-white: #ffffff;
+
+    --font-display: "Space Grotesk", sans-serif;
+    --font-body: "Noto Sans", sans-serif;
+
+    --radius-none: 0;
+    --radius: 0.125rem;
+    --radius-lg: 0.25rem;
+    --radius-xl: 0.5rem;
+    --radius-full: 0.75rem;
+
+    --shadow-neo: 4px 4px 0px 0px #000000;
+    --shadow-neo-sm: 2px 2px 0px 0px #000000;
+    --shadow-neo-lg: 8px 8px 0px 0px #000000;
+    --shadow-neo-white: 4px 4px 0px 0px #ffffff;
+}
+
+@layer utilities {
+    .text-outline {
+        -webkit-text-stroke: 2px #EBFF00;
+        color: transparent;
+    }
+}
+
+.neo-border {
+    border: 2px solid black;
+}
+
+.dark .neo-border {
+    border: 2px solid white; 
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #101622; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #EBFF00; 
+    border: 2px solid #101622;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}

@@ -20,8 +20,8 @@ export const projects: Project[] = [
         tags: ["Astro", "Tailwind", "Supabase"],
         accent: "bg-[#135bec]",
         shadow: "bg-[#FF0099]",
-        link: "#",
-        repo: "#"
+        link: "https://project-overlord.pages.dev/",
+        repo: "https://github.com/richardmarove/project-overlord"
     },
     {
         title: "Alvetrix",
@@ -36,15 +36,15 @@ export const projects: Project[] = [
         isUnderDevelopment: true
     },
     {
-        title: "Neon Nexus",
-        description: "A cyberpunk-themed landing page template with heavy emphasis on animations.",
-        image: "",
+        title: "Weather App",
+        description: "A weather app that tells you the weather in your location.",
+        image: "/weather.png",
         category: "Frontend",
-        tags: ["React", "Framer Motion", "Tailwind"],
+        tags: ["React Vite", "TailwindCSS", "OpenWeatherMap API"],
         accent: "bg-[#00FFCC]",
         shadow: "bg-[#9D00FF]",
-        link: "#",
-        repo: "#"
+        link: "https://rickysweather.pages.dev/",
+        repo: "https://github.com/richardmarove/weather-app"
     },
     {
         title: "Ricky's AI Wrapper",
@@ -54,19 +54,19 @@ export const projects: Project[] = [
         tags: ["Next.js", "Tailwind", "AI Studio", "OpenRouter"],
         accent: "bg-[#FF3366]",
         shadow: "bg-[#00E5FF]",
-        link: "#",
-        repo: "#"
+        link: "https://geminiw.pages.dev/",
+        repo: "https://github.com/richardmarove/geminiwrapper"
     },
     {
-        title: "Minimalist Folio",
-        description: "A hyper-minimalist portfolio template focused on typography and spacing.",
-        image: "",
+        title: "Astro98",
+        description: "An uncomplete attempt to make a personal portfolio site with the vibe of Windows 98.",
+        image: "/astro98.png",
         category: "Frontend",
-        tags: ["HTML", "Vanilla CSS", "JS"],
+        tags: ["Astro", "Tailwind", "React"],
         accent: "bg-black dark:bg-white",
         shadow: "bg-[#FF9900]",
-        link: "#",
-        repo: "#"
+        link: "https://astro98.pages.dev/",
+        repo: "https://github.com/richardmarove/astro98"
     }
 ];
 

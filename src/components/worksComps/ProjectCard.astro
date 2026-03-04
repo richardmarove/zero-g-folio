@@ -102,17 +102,30 @@ const { project, index } = Astro.props;
                             </a>
                         )
                     }
-                    <a
-                        href={project.repo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="px-3 py-2 bg-transparent text-black dark:text-white border-2 border-black dark:border-white hover:bg-[#EBFF00] hover:text-black hover:border-black transition-colors"
-                        title="Source Code"
-                    >
-                        <span class="material-symbols-outlined text-[18px]"
-                            >code</span
-                        >
-                    </a>
+                    {
+                        project.isUnderDevelopment ? (
+                            <div
+                                class="px-3 py-2 bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 border-2 border-dashed border-slate-400 dark:border-slate-500 flex items-center justify-center cursor-not-allowed"
+                                title="Private Repository"
+                            >
+                                <span class="material-symbols-outlined text-[18px]">
+                                    lock
+                                </span>
+                            </div>
+                        ) : (
+                            <a
+                                href={project.repo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="px-3 py-2 bg-transparent text-black dark:text-white border-2 border-black dark:border-white hover:bg-[#EBFF00] hover:text-black hover:border-black transition-colors"
+                                title="Source Code"
+                            >
+                                <span class="material-symbols-outlined text-[18px]"
+                                    >code</span
+                                >
+                            </a>
+                        )
+                    }
                 </div>
             </div>
         </div>

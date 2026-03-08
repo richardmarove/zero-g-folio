@@ -57,6 +57,7 @@ export const toolkitCategories: ToolkitCategory[] = [
         items: [
             { name: "Lenovo IdeaPad 5" },
             { name: "Razer Cynosa V2" },
+            { name: "Customized Fantech MAXFIT61 Frost"},
             { name: "Fantech RHASTA II G13 Mouse" },
         ],
     },

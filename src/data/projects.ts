@@ -67,7 +67,18 @@ export const projects: Project[] = [
         shadow: "bg-[#FF9900]",
         link: "https://astro98.pages.dev/",
         repo: "https://github.com/richardmarove/astro98"
+    },
+    {
+        title: "Marove Lux",
+        description: "My first mobile app: a sleek and efficient study flashcard app designed for modern students.",
+        image: "/marovelux.png",
+        category: "Mobile",
+        tags: ["React Native", "StyleSheet", "Expo"],
+        accent: "bg-[#EBFF00]",
+        shadow: "bg-[#135bec]",
+        link: "https://appetize.io/app/b_sttipfgfue22etld2oitvajqdm",
+        repo: "https://github.com/richardmarove/marove-lux"
     }
 ];
 
-export const categories = ["All", "Frontend", "Fullstack"];
+export const categories = ["All", "Frontend", "Fullstack", "Mobile"];

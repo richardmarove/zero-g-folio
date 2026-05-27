@@ -24,13 +24,13 @@
             </p>
         </div>
         <div class="grid grid-cols-1 gap-16">
-            <article class="group relative">
+            <article class="group relative z-10 hover:z-30">
                 <div
                     class="absolute -inset-2 bg-[#FF0099] rounded-none transform -rotate-1 group-hover:-rotate-2 transition-transform opacity-100 border-2 border-black dark:border-transparent"
                 >
                 </div>
                 <div
-                    class="relative grid md:grid-cols-2 gap-0 border-4 border-black dark:border-white bg-white dark:bg-[#192233] shadow-neo-lg hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all duration-300"
+                    class="relative grid md:grid-cols-2 gap-0 border-4 border-black dark:border-white bg-white dark:bg-[#192233] shadow-neo-lg hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all duration-300 z-10"
                 >
                     <div
                         class="h-64 md:h-auto min-h-[300px] border-b-4 md:border-b-0 md:border-r-4 border-black dark:border-white relative overflow-hidden"
@@ -99,13 +99,13 @@
                     </div>
                 </div>
             </article>
-            <article class="group relative">
+            <article class="group relative z-10 hover:z-30">
                 <div
                     class="absolute -inset-2 bg-black dark:bg-white rounded-none transform rotate-1 group-hover:rotate-2 transition-transform opacity-100 border-2 border-transparent"
                 >
                 </div>
                 <div
-                    class="relative grid md:grid-cols-2 gap-0 border-4 border-black dark:border-white bg-white dark:bg-[#192233] shadow-neo-lg hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all duration-300"
+                    class="relative grid md:grid-cols-2 gap-0 border-4 border-black dark:border-white bg-white dark:bg-[#192233] shadow-neo-lg hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all duration-300 z-10"
                 >
                     <div
                         class="h-64 md:h-auto min-h-[300px] border-b-4 md:border-b-0 md:border-r-4 border-black dark:border-white relative overflow-hidden md:order-2"
@@ -163,12 +163,16 @@
                                 >
                             </a>
                             <div
-                                class="px-4 py-3 bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-500 border-2 border-dashed border-slate-400 dark:border-slate-600 flex items-center justify-center cursor-not-allowed"
-                                title="Private Repository"
+                                class="relative group/lock px-4 py-3 bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-500 border-2 border-dashed border-slate-400 dark:border-slate-600 flex items-center justify-center cursor-not-allowed"
                             >
                                 <span class="material-symbols-outlined"
                                     >lock</span
                                 >
+                                <div
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-black text-white text-xs font-bold border border-slate-700 dark:border-slate-300 shadow-neo-sm whitespace-nowrap pointer-events-none opacity-0 translate-y-1 md:group-hover/lock:opacity-100 md:group-hover/lock:translate-y-0 transition-all duration-200 ease-out invisible md:group-hover/lock:visible"
+                                >
+                                    This project is closed-source.
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -103,7 +103,7 @@ const { project, index } = Astro.props;
                         )
                     }
                     {
-                        project.isUnderDevelopment ? (
+                        (project.isUnderDevelopment || project.repoLocked) ? (
                             <div
                                 class="px-3 py-2 bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 border-2 border-dashed border-slate-400 dark:border-slate-500 flex items-center justify-center cursor-not-allowed"
                                 title="Private Repository"

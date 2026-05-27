@@ -9,6 +9,7 @@ export interface Project {
     link: string;
     repo: string;
     isUnderDevelopment?: boolean;
+    repoLocked?: boolean;
 }
 
 export const projects: Project[] = [
@@ -31,9 +32,9 @@ export const projects: Project[] = [
         tags: ["PHP", "CSS", "MySQL"],
         accent: "bg-[#EBFF00]",
         shadow: "bg-black dark:bg-white",
-        link: "#",
+        link: "https://alvetrix.com/",
         repo: "#",
-        isUnderDevelopment: true
+        repoLocked: true
     },
     {
         title: "Weather App",

@@ -25,18 +25,6 @@ export const projects: Project[] = [
         repo: "https://github.com/richardmarove/project-overlord"
     },
     {
-        title: "Alvetrix",
-        description: "A comprehensive sports management & data platform that digitizes matches in Indonesia.",
-        image: "/alvetrix2.png",
-        category: "Fullstack",
-        tags: ["PHP", "CSS", "MySQL"],
-        accent: "bg-[#EBFF00]",
-        shadow: "bg-black dark:bg-white",
-        link: "https://alvetrix.com/",
-        repo: "#",
-        repoLocked: true
-    },
-    {
         title: "Weather App",
         description: "A weather app that tells you the weather in your location.",
         image: "/weather.png",

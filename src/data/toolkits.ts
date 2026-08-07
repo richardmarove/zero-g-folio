@@ -23,13 +23,14 @@ export const toolkitCategories: ToolkitCategory[] = [
             { name: "Astro" },
             { name: "React" },
             { name: "Next.js" },
+            { name: "Angular" },
         ],
     },
     {
         id: "backend",
         title: "Backend",
         accent: "pink",
-        items: [{ name: "Node.js" }, { name: "PHP" }],
+        items: [{ name: "Node.js (Hono)" }, { name: "PHP" }],
     },
     {
         id: "database",
@@ -66,8 +67,8 @@ export const toolkitCategories: ToolkitCategory[] = [
         title: "Tools",
         accent: "yellow",
         items: [
-            { name: "VS Code" },
-            { name: "Antigravity" },
+            { name: "Zed" },
+            { name: "OpenCode" },
             { name: "Git" },
             { name: "GitHub" },
         ],
